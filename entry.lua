@@ -3,10 +3,9 @@ declare_plugin(self_ID, {
     image = "mig17f.bmp",
     installed = true, -- if false that will be place holder , or advertising
     dirName = current_mod_path,
-    displayName = _("mig17f"),
-    -- developerName = _("Modell (VNAO)"),
-
-    fileMenuName = _("mig17f"),
+    displayName = _("vwv_mig17f"),
+    fileMenuName = _("vwv_mig17f"),
+    developerName = _("TeTeT"),    
     update_id = "mig17f",
     version = "0.4.0",
     state = "installed",
@@ -33,10 +32,10 @@ declare_plugin(self_ID, {
 mount_vfs_model_path(current_mod_path .. "/Shapes")
 mount_vfs_texture_path(current_mod_path .. "/Textures/Avionics")
 mount_vfs_texture_path(current_mod_path .. "/Textures/mig17f")
-mount_vfs_texture_path(current_mod_path .. "/Textures/mig17pm")
-mount_vfs_model_path(current_mod_path .. "/Cockpit/Shape")
+-- mount_vfs_texture_path(current_mod_path .. "/Textures/mig17pm")
+-- mount_vfs_model_path(current_mod_path .. "/Cockpit/Shape")
 mount_vfs_liveries_path(current_mod_path .. "/Liveries")
-mount_vfs_sound_path(current_mod_path .. "/Sounds")
+-- mount_vfs_sound_path(current_mod_path .. "/Sounds")
 -------------------------------------------------------------------------------------
 local cfg_path = current_mod_path .. "/FM/F15/config.lua"
 dofile(cfg_path)
@@ -45,14 +44,14 @@ F15FM[2] = 'F15'
 F15FM.config_path = cfg_path
 F15FM.old = 54
 
-dofile(current_mod_path .. '/weapons/guns.lua')
+-- dofile(current_mod_path .. '/weapons/guns.lua')
 dofile(current_mod_path .. '/mig_boarding_ladder.lua')
 dofile(current_mod_path .. '/mig17f.lua')
-dofile(current_mod_path .. '/mig17pm.lua')
+-- dofile(current_mod_path .. '/mig17pm.lua')
 
 dofile(current_mod_path .. "/Views17e.lua")
-make_view_settings('mig17f', ViewSettings, SnapViews)
-make_flyable('mig17f', current_mod_path .. '/Cockpit/Scripts/', {nil, old = 16},
+make_view_settings('vwv_mig17f', ViewSettings, SnapViews)
+make_flyable('vwv_mig17f', current_mod_path .. '/Cockpit/Scripts/', {nil, old = 16},
              current_mod_path .. '/comm.lua')
 -- dofile(current_mod_path.."/Views17PM.lua")
 -- make_view_settings('mig17pm' , ViewSettings, SnapViews)

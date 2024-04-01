@@ -1,6 +1,6 @@
-mig17f = {
+local vwv_mig17f = {
 
-    Name = 'mig17f', -- AG
+    Name = 'vwv_mig17f', -- AG
     DisplayName = _('MiG-17F "Fresco C"'),
     Picture = "mig17f.png",
     Rate = "50",
@@ -630,4 +630,4 @@ mig17f = {
     }
 }
 
-add_aircraft(mig17f) -- AG
+add_aircraft(vwv_mig17f)
