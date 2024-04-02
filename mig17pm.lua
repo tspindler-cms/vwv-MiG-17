@@ -371,11 +371,11 @@ mig17pm =  {
 			[10] = 	{-0.896,	1.118,	0},
 			[11] = 	{0.445,	-0.436,	0},
 		}, -- end of fires_pos
-		
-		effects_presets = {
-			{effect = "OVERWING_VAPOR", file = current_mod_path.."/Effects/VSN_F4E_overwingVapor.lua"},
-		},
-		
+
+--		effects_presets = {
+--			{effect = "OVERWING_VAPOR", file = current_mod_path.."/Effects/VSN_F4E_overwingVapor.lua"},
+--		},
+
 		chaff_flare_dispenser = 
 		{
 			[1] = 

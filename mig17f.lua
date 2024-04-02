@@ -254,12 +254,12 @@ local vwv_mig17f = {
         [11] = {0.445, -0.436, 0}
     }, -- end of fires_pos
 
-    effects_presets = {
-        {
-            effect = "OVERWING_VAPOR",
-            file = current_mod_path .. "/Effects/VSN_F4E_overwingVapor.lua"
-        }
-    },
+--    effects_presets = {
+--        {
+--            effect = "OVERWING_VAPOR",
+--            file = current_mod_path .. "/Effects/VSN_F4E_overwingVapor.lua"
+--        }
+--    },
 
     chaff_flare_dispenser = {
         [1] = {dir = {0, 1, 0}, pos = {-5.776, 1.4, -0.422}}, -- end of [1]
