@@ -1,7 +1,7 @@
 local vwv_mig17f = {
 
     Name = 'vwv_mig17f', -- AG
-    DisplayName = _('MiG-17F "Fresco C"'),
+    DisplayName = _('[VWV] MiG-17F "Fresco C"'),
 	HumanCockpit = true,
 	HumanCockpitPath = current_mod_path..'/Cockpit/',
     Picture = "mig17f.png",
@@ -426,22 +426,23 @@ local vwv_mig17f = {
 
         }), pylon(3, 0, 0.00, 0.00, 0.000,
             {use_full_connector_position = false, connector = "pylon_3"}, {
-		}), pylon(4, 0, 0.00, 0.00, 0.00, 
-			{use_full_connector_position = false, connector = "pylon_4"}, {
-		})
-
+                { CLSID = "PTB400_MIG15" ,attach_point_position = {0.00, 0.25 ,0 }},
+        }), pylon(4, 0, 0.00, 0.00, 0.00,
+            {use_full_connector_position = false, connector = "pylon_4"}, {
+                { CLSID = "PTB400_MIG15" ,attach_point_position = {0.00, 0.25 ,0 }},
+        })
     },
 
-    ------------------------------------------------------------------------------			
+    ------------------------------------------------------------------------------
 
     Tasks = {
-        aircraft_task(CAP), 
-		aircraft_task(Escort), 
+        aircraft_task(CAP),
+		aircraft_task(Escort),
 		aircraft_task(FighterSweep),
-        aircraft_task(Intercept), 
+        aircraft_task(Intercept),
 		aircraft_task(Reconnaissance),
-        aircraft_task(GroundAttack), 
-		aircraft_task(CAS), 
+        aircraft_task(GroundAttack),
+		aircraft_task(CAS),
 		aircraft_task(AFAC),
         aircraft_task(RunwayAttack),
         aircraft_task(AntishipStrike),
@@ -543,8 +544,8 @@ local vwv_mig17f = {
 		["NOSE_BOTTOM"]			= {critical_damage = 3,args =  {148}},
 		["NOSE_TOP_SIDE"]		= {critical_damage = 3,args =  {147}},
 
-		["WING_L_OUT"]			= {critical_damage = 10,args =  {223},deps_cells = {"FLAP_L_IN","WING_L_PART_OUT"}},
-		["WING_R_OUT"]			= {critical_damage = 10,args =  {213},deps_cells = {"FLAP_R_IN","WING_R_PART_OUT"}},
+		["WING_L_OUT"]			= {critical_damage = 10,args =  {223},deps_cells = {"FLAPS_L_IN","WING_L_PART_OUT"}},
+		["WING_R_OUT"]			= {critical_damage = 10,args =  {213},deps_cells = {"FLAPS_R_IN","WING_R_PART_OUT"}},
 		["WING_L_PART_OUT"]		= {critical_damage = 3, args =  {221}},
 		["WING_R_PART_OUT"]		= {critical_damage = 3, args =  {231}},
 		["FLAPS_L_IN"]			= {critical_damage = 4, args =  {227}},
